@@ -160,8 +160,10 @@ const Projects = () => {
                   <a href={project.demoLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
                 </Button>
                 {project.githubBackend && project.githubFrontend ? (
-                  <div className="flex gap-2  items-center">
-                    <IoLogoGithub className="text-3xl" />{"=>"}
+                  <div className="flex gap-0 items-center">
+                    <IoLogoGithub className="text-1xl" />{"=>"}
+                <div className="flex gap-1">
+
 
                     <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10">
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Frontend</a>
@@ -169,6 +171,7 @@ const Projects = () => {
                     <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10">
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Backend</a>
                     </Button>
+                    </div>
                   </div>)
                   : (
                     <div className="flex gap-2  items-center">
