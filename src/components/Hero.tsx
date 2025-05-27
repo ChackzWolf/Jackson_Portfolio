@@ -1,4 +1,4 @@
-
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -9,18 +9,23 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-white to-gray-100">
       <div className="container">
-        <div className="flex flex-col-reverse md:flex-row-reverse items-center">
-          <div className="w-full md:w-1/2 text-center md:text-left">
+        <div className="flex flex-col-reverse md:flex-row-reverse items-center overflow-hidden">
+          <motion.div 
+           initial={{ opacity: 0, x: 100 }}
+           whileInView={{ opacity: 2, x: 0 }}
+           transition={{ duration: 0.6 }}
+
+          className="w-full md:w-1/2 text-center md:text-left">
             <h4 className="text-portfolio-lightYellow font-medium animate-slide-in my-5 md:my-2">Hello, I'm</h4>
-            <h1 className="text-portfolio-navy font-bold animate-fade-in text-3xl md:text-5xl">
+            <h1 className="text-portfolio-navy font-bold  text-3xl md:text-5xl">
               <span className="block mb-5">Jackson Cheriyan Kollareth</span>
               <span className="text-portfolio-lightYellow ">MERN Stack Developer</span>
             </h1>
-            <p className="text-gray-600 text-lg max-w-lg mx-auto md:mx-0 animate-fade-in my-5" style={{ animationDelay: "0.2s" }}>
+            <p className="text-gray-600 text-lg max-w-lg mx-auto md:mx-0  my-5" style={{ animationDelay: "0.2s" }}>
               I build modern, responsive web applications using MongoDB, Express, React, and Node.js.
               Passionate about creating clean, efficient, and user-friendly experiences.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start " style={{ animationDelay: "0.4s" }}>
               <Button 
                 onClick={scrollToProjects}
                 className="bg-portfolio-lightYellow hover:bg-portfolio-yellow text-white"
@@ -49,8 +54,11 @@ const Hero = () => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          </motion.div>
+           <motion.div 
+           initial={{ opacity: 0, x: -100 }}
+           whileInView={{ opacity: 2, x: 0 }}
+           transition={{ duration: 0.6 }} className="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center " style={{ animationDelay: "0.4s" }}>
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
               <div className="absolute inset-0 bg-portfolio-lightYellow/20 rounded-full"></div>
               <div className="absolute inset-4 bg-portfolio-lightYellow/40 rounded-full"></div>
@@ -59,7 +67,7 @@ const Hero = () => {
                 <img src="/profile/avatar.jpeg" alt="" />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
@@ -59,7 +60,11 @@ const Contact = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="animate-fade-in">
+            <motion.div
+                                          initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1, x: 0}}
+                              transition={{ duration: 1}} 
+            className="">
               <h3 className="text-2xl font-bold text-portfolio-navy mb-4">Contact Information</h3>
               <p className="text-gray-600 mb-6">
                 I'm currently available for freelance work and full-time positions.
@@ -128,9 +133,13 @@ const Contact = () => {
                   </a> */}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <Card className="border-none shadow-md animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <Card className="border-none shadow-md "
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1}}
+                              transition={{ duration: 1}}
+             >
               <CardContent className="p-6">
                 <h3 className="text-2xl font-bold text-portfolio-navy mb-4">Send a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">

@@ -126,8 +126,16 @@ const Projects = () => {
         <h2 className="section-title text-portfolio-navy mb-16">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projectsData.map((project, index) => (
-            <Card key={project.id} className="card-hover overflow-hidden bg-white border-0 shadow-md animate-fade-in flex flex-col justify-between" style={{ animationDelay: `${index * 0.1 + 0.1}s` }}>
-              <div className="h- overflow-hidden">
+            
+            
+            <Card            
+                              key={index}
+                              initial={{ opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: index * 0.15 }}
+
+             className="card-hover overflow-hidden bg-white border-0 shadow-md flex flex-col justify-between transition-all" >
+              <div className=" overflow-hidden transition-all">
                 <img
                   src={project.image}
                   alt={project.title}

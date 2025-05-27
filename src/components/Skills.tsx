@@ -38,7 +38,12 @@ const Skills = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillsData.map((category, index) => (
-            <Card key={category.title} className="card-hover border-none shadow-md animate-fade-in" style={{ animationDelay: `${index * 0.1 + 0.1}s` }}>
+            <Card 
+                                          key={index}
+                              initial={{ opacity: 0, y: 50 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: index * 0.15 }}
+            className="card-hover border-none shadow-md animate-fade-in" style={{ animationDelay: `${index * 0.1 + 0.1}s` }}>
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 rounded-full bg-portfolio-lightYellow/10 flex items-center justify-center mr-3 text-portfolio-lightYellow" dangerouslySetInnerHTML={{ __html: category.icon }}></div>
