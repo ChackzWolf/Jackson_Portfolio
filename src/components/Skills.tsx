@@ -10,17 +10,17 @@ interface SkillCategory {
 const skillsData: SkillCategory[] = [
   {
     title: "Frontend",
-    skills: ["React", "Redux", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Material UI"],
+    skills: ["React", "Redux", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Material UI", "Next.js", "Bootstrap"],
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express.js", "MongoDB", "Mongoose", "REST API", "GraphQL", "Firebase"],
+    skills: ["Node.js", "Express.js", "TypeScript","Micro-service", "MongoDB", "Mongoose", "REST API", "gRPC", "Apache-Kafka", "PostgreSQL", "Firebase", "S3"],
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`
   },
   {
     title: "DevOps & Tools",
-    skills: ["Git", "GitHub", "Docker", "AWS", "Heroku", "Netlify", "Vercel", "CI/CD"],
+    skills: ["Git", "GitHub", "Docker", "Kubernetes", "Helm-chart", "AWS", "EC2", "Google Cloud Run", "Vercel", "Render", "CI/CD"],
     icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" y1="9" x2="20" y2="9"></line><line x1="4" y1="15" x2="20" y2="15"></line><line x1="10" y1="3" x2="8" y2="21"></line><line x1="16" y1="3" x2="14" y2="21"></line></svg>`
   },
   {
