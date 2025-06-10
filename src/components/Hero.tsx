@@ -63,7 +63,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-portfolio-lightYellow/20 rounded-full"></div>
               <div className="absolute inset-4 bg-portfolio-lightYellow/40 rounded-full"></div>
               <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                <img src="/profile/avatar4.jpeg" alt="" />
+                <img src="/profile/avatar2.jpeg" alt="" />
               </div>
             </div>
           </motion.div>
