@@ -120,6 +120,15 @@ const projectsData: Project[] = [
     githubFrontend: "https://github.com/ChackzWolf/Task-Management-App_client",
     githubBackend: "https://github.com/ChackzWolf/Task-Management-App_server",
   },
+  {
+    id: 5,
+    title: "Ethereum website clone",
+    description: "Task Management App is a realtime productivity tool built to practice Socket.io for live updates on task progress and status. It features a comprehensive dashboard for tracking tasks, secure user authentication using JWT, and seamless collaboration through instant data synchronization. The app emphasizes responsiveness, user experience, and efficient task tracking.",
+    image: "/website-images/ethereum.png",
+    techStack: ["HTML", "CSS"],
+    demoLink: "https://ethereum-responsive.vercel.app",
+    githubLink: "https://github.com/ChackzWolf/ethereum-responsive",
+  },
 ];
 
 
