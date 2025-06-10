@@ -123,7 +123,7 @@ const projectsData: Project[] = [
   {
     id: 5,
     title: "Ethereum website clone",
-    description: "Task Management App is a realtime productivity tool built to practice Socket.io for live updates on task progress and status. It features a comprehensive dashboard for tracking tasks, secure user authentication using JWT, and seamless collaboration through instant data synchronization. The app emphasizes responsiveness, user experience, and efficient task tracking.",
+    description: "This was one of the first projects I built when I started my web development journey. It's a fully responsive clone of the official Ethereum website, crafted using just HTML and CSS. The goal was to sharpen my fundamentals in layout, responsiveness, and pixel-perfect design.",
     image: "/website-images/ethereum.png",
     techStack: ["HTML", "CSS"],
     demoLink: "https://ethereum-responsive.vercel.app",
