@@ -76,6 +76,10 @@ const projectsData: Project[] = [
         name: "Payment-service",
         link: "https://github.com/ChackzWolf/DoWhileLearn_Payment_Service",
       },
+      {
+        name: "Coordinator-service",
+        link: "https://github.com/ChackzWolf/DWL_Coordinator_Service",
+      },
     ]
   },
   {
@@ -126,15 +130,15 @@ const Projects = () => {
         <h2 className="section-title text-portfolio-navy mb-16">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projectsData.map((project, index) => (
-            
-            
-            <Card            
-                              key={index}
-                              initial={{ opacity: 0, y: 20 }}
-                              whileInView={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.5, delay: index * 0.15 }}
 
-             className="card-hover overflow-hidden bg-white border-0 shadow-md flex flex-col justify-between transition-all" >
+
+            <Card
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+
+              className="card-hover overflow-hidden bg-white border-0 shadow-md flex flex-col justify-between transition-all" >
               <div className=" overflow-hidden transition-all">
                 <img
                   src={project.image}
@@ -162,29 +166,27 @@ const Projects = () => {
                 {project.githubBackend && project.githubFrontend ? (
                   <div className="flex gap-0 items-center">
                     <IoLogoGithub className="text-1xl" />{"=>"}
-                <div className="flex gap-1">
-
-
-                    <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10">
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Frontend</a>
-                    </Button>
-                    <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10">
-                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Backend</a>
-                    </Button>
+                    <div className="flex gap-1">
+                      <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10 focus:outline-0">
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Frontend</a>
+                      </Button>
+                      <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10 focus:outline-0">
+                        <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Backend</a>
+                      </Button>
                     </div>
                   </div>)
                   : (
                     <div className="flex gap-2  items-center">
-                       <IoLogoGithub className="text-3xl" />{"=>"}
+                      <IoLogoGithub className="text-3xl" />{"=>"}
                       {project.githubLink && (
-                        <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10">
+                        <Button asChild variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10 focus:outline-0">
                           <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a>
                         </Button>
                       )}
                       {project.gitServices && (
                         <DropdownMenu>
                           <DropdownMenuTrigger asChild>
-                            <Button variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10">
+                            <Button variant="outline" className="border-portfolio-navy text-portfolio-navy hover:bg-portfolio-navy/10 focus:outline-0">
                               GitHub
                             </Button>
                           </DropdownMenuTrigger>

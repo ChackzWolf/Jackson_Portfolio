@@ -63,7 +63,6 @@ const Hero = () => {
               <div className="absolute inset-0 bg-portfolio-lightYellow/20 rounded-full"></div>
               <div className="absolute inset-4 bg-portfolio-lightYellow/40 rounded-full"></div>
               <div className="absolute inset-8 bg-white rounded-full flex items-center justify-center overflow-hidden">
-                {/* Replace with actual profile image */}
                 <img src="/profile/avatar.jpeg" alt="" />
               </div>
             </div>
